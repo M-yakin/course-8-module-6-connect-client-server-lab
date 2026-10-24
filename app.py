@@ -20,8 +20,8 @@ def add_event():
     data = request.get_json()
     new_id = max((e["id"] for e in events),
 default=0) + 1
-   new_event = {"id": new_id, "title": 
-data["title"]}
+   new_event = {"id": new_id, "title":
+ data["title"]}
    products.append(new_event)
     return jsonify(new_event), 201
 
